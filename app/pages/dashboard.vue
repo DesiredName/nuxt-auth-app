@@ -1,6 +1,7 @@
 <template>
     <div>
-    Dashboard - for AUTHENTICATED only
+        Dashboard - for AUTHENTICATED only
+        Hi, {{ data?.user?.name }}!
     </div>
 </template>
 
@@ -11,4 +12,6 @@ definePageMeta({
         navigateUnauthenticatedTo: '/login'
     }
 })
+
+const { data } = useAuth();
 </script>
